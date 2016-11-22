@@ -1,14 +1,25 @@
 {% extends 'base.html' %}
 {% block title %} Login {% endblock %}
 {% block content %}
-	<center>
+<center>
 	<div class="container">
-        <div class="col s12">
-	<form action="." method = "POST">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<input class = "btn btn-success" type = "submit" value = "Enviar"/>
-	</form>
-</body>
-</html>
+		<div class="col s12">
+
+			{% if info_enviado %}
+					<p><h4>Gracias por enviar tu comentario, nos pondremos en contacto</h4></p>
+					<h5>la informacion envida fue la siguiente</h5>
+				<p><strong>Email</strong>:	{{ email }}</p>
+				<p><strong>Titulo</strong>:	{{ title }}</p>
+				<p><strong>Comentario</strong>:</p>
+				{{ text }}
+			{% else %}
+				<form action="." method = "POST">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<input class = "btn btn-success" type = "submit" value = "Enviar"/>
+				</form>
+			{% endif %}
+	</div>
+</div>
+
 {% endblock %}
