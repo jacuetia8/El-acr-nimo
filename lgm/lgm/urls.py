@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.MEDIA_ROOT}),
     #url(r'^',include('Lgm.apps.reportes.urls')),
     # url(r'^Lgm/', include('Lgm.foo.urls')),
-    
+
     # Uncomment the admin/doc line below to enable admin documentation:
 
     # Uncomment the next line to enable the admin:

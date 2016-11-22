@@ -1,4 +1,20 @@
 from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+class user_profile(models.Model):
+	
+	def url(self, filename):
+		ruta = "MultimediaData/User/%s/%s"%(self.user.username,filename)
+		return ruta
+
+	user 		=	models.OneToOneField(User)
+	photo 		=	models.ImageField(upload_to=url)
+	telefono 	=	models.CharField(max_length=30)
+
+	def __unicode__(self):
+		return self.user.username
+
 
 class Clase(models.Model):
 	nombre = models.CharField(max_length = 100)
@@ -79,14 +95,6 @@ class Valoracion(models.Model):
 	def __unicode__ (self):
 		return self.masamuscular
 
-class User(models.Model):
-	nombreusuario= models.CharField(max_length = 100)
-	correo       = models.EmailField()
-	contrasena   = models.CharField(max_length = 100)
-	
-
-	def __unicode__ (self):
-		return self.nombreusuario
 
 class Persona (models.Model):
 	nombre          = models.CharField(max_length = 100)
@@ -101,4 +109,3 @@ class Persona (models.Model):
 		return self.nombre
 
 
-# Create your models here.

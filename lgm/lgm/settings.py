@@ -127,7 +127,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'lgm.apps.home',
-    'lgm.apps.reportes',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -160,3 +159,11 @@ LOGGING = {
         },
     }
 }
+
+
+# Aqui va la configuracion del servidor de correo GMAIL
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'sena954082@gmail.com' #ponen su correo
+EMAIL_HOST_PASSWORD = 'sena1234' #poner la clave de su correo
+EMAIL_USE_TLS = True

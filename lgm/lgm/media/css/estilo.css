@@ -1,0 +1,39 @@
+ body {
+ 	background: #E6E6E6;
+ }
+.content {
+	background: #fff;
+	box-shadow: 0 0 10px #000;
+	border-radius: 10px;
+	height: 500px;
+	margin: 0 auto;
+	padding: 5px;
+	text-align: center;
+	width: 900px;
+}
+.capas {
+	border: 1px solid #000;
+	display: inline-block;
+	height: 700px;
+	vertical-align: top;
+	width: 672px;	
+}
+#form {
+	border-bottom: 1px solid #000;
+	height: 330px;
+	text-align: left;
+}
+#data {
+	text-align: left;
+	overflow: auto;
+}
+#ubicaciones {
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+}
+#ubicaciones li {
+	color: #084B8A;
+	font-family: Arial, sans-serif;
+
+}

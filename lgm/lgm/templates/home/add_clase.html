@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>clase</title>
-</head>
-<body>
-
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
 	<form action="." method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		{{ form.as_p }}
-		<button type="submit"> guardar </button>
+		<button type="submit" class="btn btn-primary"> guardar </button>
 		<input type="reset" value="Limpiar">
 
 	</form>
-	{{ info }}
-</body>
-</html>
+{% endblock %}
